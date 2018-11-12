@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仪表盘1</title>
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+
+    var option = {
+        backgroundColor: '',
+        tooltip: {
+            formatter: '<div style="text-align: center;">{b}：</div>{c}%'
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [{
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: [
+                        [0.3, '#1bc246'],
+                        [0.7, '#ef966e'],
+                        [1, '#c70013']
+                    ],
+                    // 圆环宽度
+                    width: 16
+                }
+            },
+            axisTick: {
+                show: true,
+                length: 25
+            },
+            axisLabel: {
+                // 标签与刻度线的距离。
+                distance: 5,
+                textStyle: {
+                    color: 'auto'
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'auto'
+                }
+            },
+            radius: '50%',
+            pointer: {
+                width: 10
+            },
+            title: {
+                // 维度名 距离
+                offsetCenter: [0, '70%']
+            },
+            detail: {
+                textStyle: {
+                    fontWeight: 'bolder',
+                    fontSize: 15,
+                    color: '#00e61c'
+                },
+                offsetCenter: [0, '90%'],
+                formatter: '{value}%'
+            },
+            min: 0,
+            max: 100,
+            name: '米类仪表盘',
+            type: 'gauge',
+            show: false,
+            splitNumber: 10,
+            pointer: {
+                width: 5           // 指针大小
+            },
+            data: [{
+                value: '33',
+                name: 'CPU使用率'
+            }]
+        }]
+    };
+    myChart.setOption(option);
+</script>
+</body>
+</html>

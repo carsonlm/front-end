@@ -1,0 +1,12 @@
+node_modules/
+**/*.log
+.idea
+.git
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.iws
+*.iml
+*.ipr

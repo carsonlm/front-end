@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 1000px;
+            background: #91a4ad;
+            border: 0px;
+            margin: 0;
+            padding: 0;
+        }
+        .first{
+            width: 1000px;
+            height: 300px;
+            background: #19ad8f;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+
+        }
+        .first-one{
+            width: 400px;/*固定宽度*/
+            height: 300px;
+            background: #0fad19;
+            margin: 0 0 0 0;
+            z-index: 100;
+        }
+        .first-two{
+            /*width: 500px;*/
+            flex: 1;/*宽度适应*/
+            height: 300px;
+            background: #ad5b38;
+            margin: 0 0 0 0;
+            right: 0px;
+        }
+
+
+        .second{
+            width: 1000px;
+            height: 400px;
+            background: #727aad;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .second-one{
+            width: 400px;
+            height: 400px;
+            background: #ada13c;
+        }
+        .second-two{
+            /*width: 300px;*/
+            height: 400px;
+            background: #ad2f20;
+            flex: 2;
+        }
+        .second-three{
+            /*width: 300px;*/
+            height: 400px;
+            flex: 1;
+            background: #4035ad;
+        }
+
+
+        .three{
+            width: 1000px;
+            height: 300px;
+            background: #668bad;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .three-one{
+            /*width: 500px;*/
+            height: 300px;
+            background: #ad1a93;
+            flex: 1;
+        }
+        .three-two{
+            /*width: 500px;*/
+            flex: 1;
+            height: 300px;
+            background: #4b26ad;
+        }
+    </style>
+</head>
+<body>
+  <div class="box">
+      <div class="first">
+          <div class="first-one">first-one</div>
+          <div class="first-two">first-two</div>
+      </div>
+      <div class="second">
+          <div class="second-one">second-one</div>
+          <div class="second-two">second-two</div>
+          <div class="second-three">second-three</div>
+      </div>
+      <div class="three">
+          <div class="three-one">three-one</div>
+          <div class="three-two">three-two</div>
+      </div>
+  </div>
+
+</body>
+</html>
